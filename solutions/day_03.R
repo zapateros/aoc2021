@@ -1,6 +1,6 @@
 input <- readLines("input/input_day_03.txt")
 n_col <- nchar(input[1])
-mat   <- data.frame(matrix(as.numeric(unlist(strsplit(input, ""))), byrow = TRUE, ncol = n_col))
+mat   <- matrix(as.numeric(unlist(strsplit(input, ""))), byrow = TRUE, ncol = n_col)
 bits  <- 2^((n_col - 1):0)
 
 # Star 1
