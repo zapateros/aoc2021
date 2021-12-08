@@ -11,6 +11,12 @@ output <- sum(aggs[which(names(aggs) %in% c(2, 3, 4, 7))])
 cat("Day 8 Star 1:", output)
 
 # Star 2
+# I call the edges:
+#     t
+# lt      rt
+#     m
+# lb      rb
+#     b
 edges <- c("t", "rt", "lt", "m", "rb", "lb", "b")
 codes <- NULL
 for(i in 1:nrow(mat)){
