@@ -75,6 +75,8 @@ x2 = d5 + 11
 # floor(x/1) doesn't remove anything.
 # With a bit of mental gymnastics you can now rewrite the problem to a vector with digits that represent the relevant parts that are brought to the next operation
 # The operations then remove from and add digits to it.
+
+# STEP 3: rewrite the problem
 # In this problem the vector after the first 5 operations is:
 nums <- c((d5 + 11), (d4 + 8), (d3 + 2), (d2 + 16), (d1 + 13)) 
 # Note the digits are the relevant parts after doing the MOD 26'es
@@ -158,6 +160,8 @@ if((nums[1] - 10) == d13){
 if((nums[1] - 9) == d14){
   nums <- nums[-1]
 }
+
+# STEP 4: Solve it manually
 # I'm not going through every operation but now you can fill in all the numbers (for both star 1 and star 2)
 # For example, the first one is true if d5 == d6. So you fill in d5 = 9 and d6 = 9
 # the second operation (the second if-statement) gives (d7 + 12) - 16 == d8, wich gives d7 - 4 == d8, so d7 = 9 and d8 = 5.
